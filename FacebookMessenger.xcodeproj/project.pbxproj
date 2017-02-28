@@ -14,6 +14,10 @@
 		7BAE95571E65E14800A0124E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE95551E65E14800A0124E /* LaunchScreen.storyboard */; };
 		7BAE955F1E65E20600A0124E /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE955E1E65E20600A0124E /* BaseCell.swift */; };
 		7BAE95631E65F03000A0124E /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE95621E65F03000A0124E /* FriendCell.swift */; };
+		7BAE95791E65FFAF00A0124E /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE95751E65FFAF00A0124E /* Friend+CoreDataClass.swift */; };
+		7BAE957A1E65FFAF00A0124E /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE95761E65FFAF00A0124E /* Friend+CoreDataProperties.swift */; };
+		7BAE957B1E65FFAF00A0124E /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE95771E65FFAF00A0124E /* Message+CoreDataClass.swift */; };
+		7BAE957C1E65FFAF00A0124E /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE95781E65FFAF00A0124E /* Message+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		7BAE95581E65E14800A0124E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BAE955E1E65E20600A0124E /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		7BAE95621E65F03000A0124E /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		7BAE95751E65FFAF00A0124E /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BAE95761E65FFAF00A0124E /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7BAE95771E65FFAF00A0124E /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BAE95781E65FFAF00A0124E /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				7BAE95491E65E14800A0124E /* AppDelegate.swift */,
+				7BAE956C1E65FA2500A0124E /* Model */,
 				7BAE95611E65E23A00A0124E /* Controller */,
 				7BAE95601E65E22400A0124E /* Views */,
 				7BAE95531E65E14800A0124E /* Assets.xcassets */,
@@ -84,6 +93,17 @@
 				7BAE954B1E65E14800A0124E /* FriendsVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		7BAE956C1E65FA2500A0124E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BAE95751E65FFAF00A0124E /* Friend+CoreDataClass.swift */,
+				7BAE95761E65FFAF00A0124E /* Friend+CoreDataProperties.swift */,
+				7BAE95771E65FFAF00A0124E /* Message+CoreDataClass.swift */,
+				7BAE95781E65FFAF00A0124E /* Message+CoreDataProperties.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +179,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAE955F1E65E20600A0124E /* BaseCell.swift in Sources */,
+				7BAE95791E65FFAF00A0124E /* Friend+CoreDataClass.swift in Sources */,
 				7BAE954C1E65E14800A0124E /* FriendsVC.swift in Sources */,
 				7BAE954A1E65E14800A0124E /* AppDelegate.swift in Sources */,
 				7BAE95521E65E14800A0124E /* FacebookMessenger.xcdatamodeld in Sources */,
+				7BAE957C1E65FFAF00A0124E /* Message+CoreDataProperties.swift in Sources */,
 				7BAE95631E65F03000A0124E /* FriendCell.swift in Sources */,
+				7BAE957A1E65FFAF00A0124E /* Friend+CoreDataProperties.swift in Sources */,
+				7BAE957B1E65FFAF00A0124E /* Message+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

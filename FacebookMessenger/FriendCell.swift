@@ -9,7 +9,25 @@
 import UIKit
 
 
-class FriendCell: BaseCell {
+class MessageCell: BaseCell {
+    
+    var message: Message? {
+        didSet {
+            if let friend = message?.friend {
+                nameLabel.text = friend.name
+                if let profileImageName = friend.profileImageName {
+                    profileImageview.image = UIImage(named: profileImageName)
+                    hasReadImageview.image = UIImage(named: profileImageName)
+                }
+            }
+            if let date = message?.date {
+                timeLabel.text = String(describing: date)
+            }
+            if let text = message?.text {
+                messageLabel.text = text
+            }
+        }
+    }
     
     let profileImageview: UIImageView = {
         let iv = UIImageView()
@@ -31,7 +49,6 @@ class FriendCell: BaseCell {
     
     let nameLabel: UILabel = {
         let l = UILabel()
-        l.text = "James"
         l.translatesAutoresizingMaskIntoConstraints = false
         //l.backgroundColor = .green
         l.textColor = UIColor.darkGray
@@ -41,7 +58,6 @@ class FriendCell: BaseCell {
     
     let messageLabel: UILabel = {
         let l = UILabel()
-        l.text = "som existing message 'lkjv'lkvj'lkvjkl''sldkvjl'dkw"
         //l.backgroundColor = .red
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = UIColor.darkGray

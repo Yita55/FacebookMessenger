@@ -67,7 +67,6 @@ class MessageCell: BaseCell {
     
     let timeLabel: UILabel = {
         let l = UILabel()
-        l.text = "12: 04 pm"
         //l.backgroundColor = .blue
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = UIColor.darkGray

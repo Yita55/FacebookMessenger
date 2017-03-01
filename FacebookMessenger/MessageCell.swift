@@ -11,6 +11,15 @@ import UIKit
 
 class MessageCell: BaseCell {
     
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            nameLabel.textColor = isHighlighted ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            messageLabel.textColor = isHighlighted ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            timeLabel.textColor = isHighlighted ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        }
+    }
+    
     var message: Message? {
         didSet {
             if let friend = message?.friend {
@@ -21,7 +30,7 @@ class MessageCell: BaseCell {
                 }
             }
             if let date = message?.date {
-                timeLabel.text = String(describing: date)
+                timeLabel.text = date.stringFormat()
             }
             if let text = message?.text {
                 messageLabel.text = text
@@ -139,9 +148,40 @@ class MessageCell: BaseCell {
         messageLabel.rightAnchor.constraint(equalTo: hasReadImageview.leftAnchor).isActive = true
         messageLabel.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 1/2).isActive = true
         
-        
     }
     
 }
+
+
+extension NSDate {
+    
+    func stringFormat() -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let elapsedTimeInSeconds = NSDate().timeIntervalSince(self as Date)
+        let secondsInDays: TimeInterval = 60 * 60 * 24
+        if elapsedTimeInSeconds > 7 * secondsInDays {
+            dateFormatter.dateFormat = "MM/dd/yy"
+        } else if elapsedTimeInSeconds > secondsInDays {
+            dateFormatter.dateFormat = "EEE"
+        }
+        return dateFormatter.string(from: self as Date)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

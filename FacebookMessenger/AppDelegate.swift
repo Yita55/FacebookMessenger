@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CoredataStack.sharedInstance.applicationDocumentsDirectory()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let layout = UICollectionViewFlowLayout()
-        let friendsVC = FriendsVC(collectionViewLayout: layout)
-        window?.rootViewController = UINavigationController(rootViewController: friendsVC)
+//        let layout = UICollectionViewFlowLayout()
+//        let friendsVC = FriendsVC(collectionViewLayout: layout)
+//        window?.rootViewController = UINavigationController(rootViewController: friendsVC)
+        window?.rootViewController = CustomTabBarController()
         return true
     }
 

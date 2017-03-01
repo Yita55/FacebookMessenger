@@ -20,6 +20,8 @@
 		7BAE957C1E65FFAF00A0124E /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE95781E65FFAF00A0124E /* Message+CoreDataProperties.swift */; };
 		7BAE957E1E6625E100A0124E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE957D1E6625E100A0124E /* CoreDataStack.swift */; };
 		7BAE95801E66583400A0124E /* ChatLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE957F1E66583400A0124E /* ChatLogVC.swift */; };
+		7BD171021E6748720012FF66 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD171011E6748720012FF66 /* CustomTabBarController.swift */; };
+		7BD171041E6754980012FF66 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD171031E6754980012FF66 /* ChatMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		7BAE95781E65FFAF00A0124E /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7BAE957D1E6625E100A0124E /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7BAE957F1E66583400A0124E /* ChatLogVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogVC.swift; sourceTree = "<group>"; };
+		7BD171011E6748720012FF66 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		7BD171031E6754980012FF66 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			children = (
 				7BAE955E1E65E20600A0124E /* BaseCell.swift */,
 				7BAE95621E65F03000A0124E /* MessageCell.swift */,
+				7BD171011E6748720012FF66 /* CustomTabBarController.swift */,
+				7BD171031E6754980012FF66 /* ChatMessageCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 			files = (
 				7BAE955F1E65E20600A0124E /* BaseCell.swift in Sources */,
 				7BAE95791E65FFAF00A0124E /* Friend+CoreDataClass.swift in Sources */,
+				7BD171021E6748720012FF66 /* CustomTabBarController.swift in Sources */,
 				7BAE954C1E65E14800A0124E /* FriendsVC.swift in Sources */,
 				7BAE954A1E65E14800A0124E /* AppDelegate.swift in Sources */,
 				7BAE95801E66583400A0124E /* ChatLogVC.swift in Sources */,
+				7BD171041E6754980012FF66 /* ChatMessageCell.swift in Sources */,
 				7BAE95521E65E14800A0124E /* FacebookMessenger.xcdatamodeld in Sources */,
 				7BAE957E1E6625E100A0124E /* CoreDataStack.swift in Sources */,
 				7BAE957C1E65FFAF00A0124E /* Message+CoreDataProperties.swift in Sources */,
@@ -348,6 +356,7 @@
 				7BAE955D1E65E14800A0124E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

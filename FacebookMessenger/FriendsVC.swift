@@ -36,17 +36,16 @@ class FriendsVC: UICollectionViewController {
         let luis = NSEntityDescription.insertNewObject(forEntityName: "Friend", into: context) as! Friend
         luis.name = "suarez"
         luis.profileImageName = "suarez"
-        createMessageWith(text: "nada boludo", friend: luis, context: context)
+        createMessageWith(text: "nada boludo me estiy preparando para ir a jugar mas tarde", friend: luis, context: context)
         createMessageWith(text: "y ney?", friend: luis, context: context)
         createMessageWith(text: "SALE ", friend: luis, context: context)
         
-        CoredataStack.sharedInstance.saveContext()
+        //Respond message
+        createMessageWith(text: "Soy yo Messi vas a ir a la pichnga?", friend: luis, context: context, isSender: true)
+        createMessageWith(text: "Soy yo", friend: luis, context: context, isSender: true)
+
         
-        //        do {
-        //            try context.save()
-        //        } catch let error {
-        //            print(error)
-        //        }
+        CoredataStack.sharedInstance.saveContext()
         loadData()
     }
     
@@ -91,11 +90,12 @@ class FriendsVC: UICollectionViewController {
         }
     }
     
-    private func createMessageWith(text: String, friend: Friend, context: NSManagedObjectContext) {
+    private func createMessageWith(text: String, friend: Friend, context: NSManagedObjectContext, isSender: Bool = false) {
         let message = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as! Message
         message.friend = friend
         message.text = text
         message.date = NSDate()
+        message.isSender = NSNumber(booleanLiteral: isSender) as Bool
     }
     
     private func fetchFriends() -> [Friend]? {

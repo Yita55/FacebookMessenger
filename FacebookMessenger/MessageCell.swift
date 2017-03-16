@@ -147,9 +147,7 @@ class MessageCell: BaseCell {
         messageLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: hasReadImageview.leftAnchor).isActive = true
         messageLabel.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 1/2).isActive = true
-        
     }
-    
 }
 
 

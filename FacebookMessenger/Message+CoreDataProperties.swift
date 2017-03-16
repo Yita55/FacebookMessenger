@@ -2,7 +2,7 @@
 //  Message+CoreDataProperties.swift
 //  FacebookMessenger
 //
-//  Created by James Rochabrun on 2/28/17.
+//  Created by James Rochabrun on 3/16/17.
 //  Copyright © 2017 James Rochabrun. All rights reserved.
 //
 
@@ -18,6 +18,7 @@ extension Message {
 
     @NSManaged public var date: NSDate?
     @NSManaged public var text: String?
+    @NSManaged public var isSender: Bool
     @NSManaged public var friend: Friend?
 
 }
